@@ -31,7 +31,7 @@ export function Main_Page() {
       <div className="space-y-4 text-center">
         <h1 className="text-3xl font-bold text-primary">Website in Progress</h1>
         <p className="max-w-md text-muted-foreground">
-          We're hard at work building an amazing new website for you. Please check back soon for updates!
+          We&apos;re hard at work building an amazing new website for you. Please check back soon for updates!
         </p>
         <Link
           href="#"
