@@ -8,7 +8,7 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
@@ -18,12 +18,23 @@
 
 body {
   color: rgb(var(--foreground-rgb));
+  font-family: var(--font-chivo), sans-serif;
   background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-libre_franklin), sans-serif;
+}
+
+a, link {
+  color: rgb(var(--foreground-rgb));
+  background-color: black;
+
 }
 
 @layer utilities {
