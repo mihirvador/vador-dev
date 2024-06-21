@@ -1,7 +1,8 @@
-import {Main_Page} from "../components/main_page";
+import MainPage from '../components/mainpage';
+import './globals.css';
 
 export default function Home() {
   return (
-    <Main_Page />
+    <MainPage />
   );
 }
