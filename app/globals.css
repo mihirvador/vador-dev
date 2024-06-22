@@ -1,3 +1,119 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.main-container {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(to top right, #f0f8f0 50%, #0a1f0a 50%);
+  background-position: 0% 100%;
+  background-size: 200% 200%;
+  transition: background-position 0.7s ease-in-out;
+}
+
+.main-container.isDarkMode {
+  background-position: 100% 0%;
+}
+
+.main-container h2,
+.main-container p,
+.main-container h1,
+.main-container .icon {
+  transition: color 0.7s ease;
+}
+
+.main-container.isDarkMode h2,
+.main-container.isDarkMode p,
+.main-container.isDarkMode h1,
+.main-container.isDarkMode .icon {
+  color: white; /* Adjust based on your theme colors */
+}
+
+.header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  background: none;
+}
+
+.header .button {
+  position: relative;
+  overflow: hidden;
+  padding: 0.5rem;
+  border-radius: 9999px;
+  background-color: #c0dfc0; /* Light mode color */
+  color: black;
+  transition: background-color 0.7s ease, color 0.7s ease;
+}
+
+.header.isDarkMode .button {
+  background-color: #6b9d6b; /* Dark mode color */
+  color: white;
+}
+
+.header .text {
+  font-size: 1rem;
+  font-weight: bold;
+  color: black; /* Light mode color */
+  transition: color 0.7s ease;
+}
+
+.header.isDarkMode .text {
+  color: white; /* Dark mode color */
+}
+
+.company-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: none;
+}
+
+.company-info h2,
+.company-info p {
+  transition: color 0.7s ease;
+}
+
+.company-info.isDarkMode h2,
+.company-info.isDarkMode p {
+  color: white; /* Adjust based on your theme colors */
+}
+
+.footer {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  background-color: #d2e8d2;
+  transition: background-color 0.7s ease;
+}
+
+.footer.isDarkMode {
+  background-color: #152a15;
+}
+
+.footer p {
+  transition: color 0.7s ease;
+}
+
+.footer.isDarkMode p {
+  color: white; /* Adjust based on your theme colors */
+}
+
+.overlay-enter {
+  opacity: 0;
+}
+.overlay-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+.overlay-exit {
+  opacity: 1;
+}
+.overlay-exit-active {
+  opacity: 0;
+  transition: opacity 300ms ease-out;
+}
