@@ -117,3 +117,11 @@
   opacity: 0;
   transition: opacity 300ms ease-out;
 }
+
+.footer .icon {
+  transition: color 0.7s ease;
+}
+
+.footer.isDarkMode .icon {
+  color: white; /* Adjust based on your theme colors */
+}

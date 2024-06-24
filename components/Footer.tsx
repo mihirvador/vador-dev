@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { getCurrentlyPlayingTrack, refreshAccessToken } from '../lib/spotify';
-
+import { SpotifyIcon } from "./IconComponents";
 const Footer = ({
   isDarkMode,
   activeIndex,
@@ -47,9 +47,9 @@ const Footer = ({
           </>
         ) : (
           <>
-            <img src="/placeholder.svg" alt="Album Art" className="h-12 w-12" />
+            <SpotifyIcon className="h-12 w-12"  />
             <div>
-              <p className="text-sm font-bold">Not listening to anything right now</p>
+              <p className="text-sm font-bold">Tunes are on pause</p>
               <p className="text-xs font-bold">made by Mihir Vador</p>
             </div>
           </>
