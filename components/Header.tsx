@@ -12,8 +12,10 @@ const Header = ({
   };
 
   return (
-    <header className={`header ${isDarkMode ? "isDarkMode" : ""}`}>
-      <div className="text">{">"}_ MV</div>
+    <header className={`header  ${isDarkMode ? "isDarkMode" : ""}`}>
+      <div className="text typing-animation">
+        {">"}_ MV<span className="cursor"></span>
+      </div>
       <button onClick={toggleDarkMode} className="button">
         <SunMoonIcon className="h-6 w-6 z-10 relative" />
       </button>

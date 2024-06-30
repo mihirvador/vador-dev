@@ -21,6 +21,11 @@ export default function MainPage() {
       link: "https://example.com/project2",
       description: "Detailed description of Project 2.",
     },
+    {
+      title: "Project 3",
+      link: "https://example.com/project2",
+      description: "Detailed description of Project 2.",
+    },
   ];
 
   const companies = [
@@ -52,9 +57,9 @@ export default function MainPage() {
     >
       <Header isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
       <main className={`flex-grow overflow-auto px-6 md:px-12 lg:px-24`}>
-        <div className="flex flex-col items-center mt-4">
+        <div className="flex flex-col items-center mt-2">
           <h1 className="text-4xl font-bold">Mihir Vador</h1>
-          <p className="text-xl mt-2">Software Engineer. Temp.</p>
+          <p className="text-xl mt-2">Software Engineer. Builder. Audiophile</p>
           <div className="flex space-x-4 mt-4">
             <GitlabIcon
               url="https://github.com/mihirvador"
@@ -65,7 +70,10 @@ export default function MainPage() {
               url="https://www.linkedin.com/in/mihir-vador-166b3b173/"
               className="icon h-6 w-6"
             />
-            <FileIcon className="icon h-6 w-6" />
+            <FileIcon
+              url="/Mihir_Vador_Resume_2026.pdf"
+              className="icon h-6 w-6"
+            />
           </div>
           <div className="mt-8 space-y-8">
             {companies.map((company, index) => (
@@ -78,8 +86,8 @@ export default function MainPage() {
               />
             ))}
           </div>
-          <h2 className="text-3xl font-bold text-center">Projects</h2>
-          <div className="container py-12">
+          <div className="container mt-8 mb-4">
+            <h2 className="text-3xl font-bold text-center mb-6">Projects</h2>
             <div className="-m-4 flex flex-wrap">
               {projects.map((project, index) => (
                 <ProjectCard

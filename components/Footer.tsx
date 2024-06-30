@@ -41,7 +41,7 @@ const Footer = ({ isDarkMode }: { isDarkMode: boolean }) => {
               <img
                 src={track.item.album.images[0].url}
                 alt="Album Art"
-                className="h-12 w-12"
+                className="icon h-12 w-12"
               />
             </a>
             <div>

@@ -21,7 +21,7 @@ const Card = ({
   tech3,
   isDarkMode,
 }: CardProps) => (
-  <div className="md p-4 md:w-1/2" style={{ maxWidth: "544px" }}>
+  <div className="md p-4 md:w-1/3" style={{ maxWidth: "544px" }}>
     <div
       className={`h-full ${
         isDarkMode ? "isDarkMode" : ""
