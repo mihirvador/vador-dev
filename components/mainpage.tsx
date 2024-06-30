@@ -4,19 +4,11 @@ import { useState } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import ProjectCard from "./ProjectCard";
-import ProjectOverlay from "./ProjectOverlay";
 import CompanyInfo from "./CompanyInfo";
 import { GitlabIcon, MailIcon, LinkedinIcon, FileIcon } from "./IconComponents";
 
 export default function MainPage() {
   const [isDarkMode, setIsDarkMode] = useState(false);
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
-  const [cardRect, setCardRect] = useState<DOMRect | null>(null);
-
-  const handleCardClick = (index: number, rect?: DOMRect) => {
-    setActiveIndex(index);
-    setCardRect(rect || null);
-  };
 
   const projects = [
     {
@@ -58,32 +50,21 @@ export default function MainPage() {
         isDarkMode ? "isDarkMode" : ""
       } font-mono`}
     >
-      <Header
-        isDarkMode={isDarkMode}
-        setIsDarkMode={setIsDarkMode}
-        activeIndex={activeIndex}
-      />
-      {activeIndex !== null && cardRect && (
-        <ProjectOverlay
-          projects={projects}
-          activeIndex={activeIndex}
-          cardRect={cardRect}
-          isDarkMode={isDarkMode}
-          setActiveIndex={setActiveIndex}
-        />
-      )}
-      <main
-        className={`flex-grow overflow-auto px-6 md:px-12 lg:px-24 ${
-          activeIndex !== null ? "blur" : ""
-        }`}
-      >
+      <Header isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
+      <main className={`flex-grow overflow-auto px-6 md:px-12 lg:px-24`}>
         <div className="flex flex-col items-center mt-4">
           <h1 className="text-4xl font-bold">Mihir Vador</h1>
           <p className="text-xl mt-2">Software Engineer. Temp.</p>
           <div className="flex space-x-4 mt-4">
-            <GitlabIcon className="icon h-6 w-6" />
-            <MailIcon className="icon h-6 w-6" />
-            <LinkedinIcon className="icon h-6 w-6" />
+            <GitlabIcon
+              url="https://github.com/mihirvador"
+              className="icon h-6 w-6"
+            />
+            <MailIcon email="mvador@umich.edu" className="icon h-6 w-6" />
+            <LinkedinIcon
+              url="https://www.linkedin.com/in/mihir-vador-166b3b173/"
+              className="icon h-6 w-6"
+            />
             <FileIcon className="icon h-6 w-6" />
           </div>
           <div className="mt-8 space-y-8">
@@ -97,15 +78,19 @@ export default function MainPage() {
               />
             ))}
           </div>
-          <div className="mt-10 mb-4">
-            <h2 className="text-3xl font-bold text-center">Projects</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
+          <h2 className="text-3xl font-bold text-center">Projects</h2>
+          <div className="container py-12">
+            <div className="-m-4 flex flex-wrap">
               {projects.map((project, index) => (
                 <ProjectCard
                   key={index}
-                  project={project}
-                  index={index}
-                  handleCardClick={handleCardClick}
+                  title={project.title}
+                  description={project.description}
+                  href={project.link}
+                  github={project.link}
+                  tech1={project.description}
+                  tech2={project.description}
+                  tech3={project.description}
                   isDarkMode={isDarkMode}
                 />
               ))}
@@ -113,7 +98,7 @@ export default function MainPage() {
           </div>
         </div>
       </main>
-      <Footer isDarkMode={isDarkMode} activeIndex={activeIndex} />
+      <Footer isDarkMode={isDarkMode} />
     </div>
   );
 }

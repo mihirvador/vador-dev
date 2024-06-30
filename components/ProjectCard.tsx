@@ -1,39 +1,65 @@
-import { useRef } from "react";
+import { GitlabIcon, HrefIcon } from "./IconComponents";
 
-const ProjectCard = ({
-  project,
-  index,
-  handleCardClick,
-  isDarkMode,
-}: {
-  project: any;
-  index: number;
-  handleCardClick: (index: number, rect?: DOMRect) => void;
+interface CardProps {
+  title: string;
+  description: string;
+  href?: string;
+  github?: string;
+  tech1: string;
+  tech2: string;
+  tech3: string;
   isDarkMode: boolean;
-}) => {
-  const cardRef = useRef<HTMLDivElement | null>(null); // Create a ref to the card element
+}
 
-  const onClick = () => {
-    const rect = cardRef.current?.getBoundingClientRect(); // Capture the dimensions and position of the card
-    handleCardClick(index, rect); // Pass both the index and the rectangle up to the MainPage
-  };
-
-  return (
+const Card = ({
+  title,
+  description,
+  href,
+  github,
+  tech1,
+  tech2,
+  tech3,
+  isDarkMode,
+}: CardProps) => (
+  <div className="md p-4 md:w-1/2" style={{ maxWidth: "544px" }}>
     <div
-      ref={cardRef}
-      onClick={onClick}
-      className={`relative flex flex-col justify-between p-4 rounded-xl shadow-lg cursor-pointer overflow-hidden transition-all duration-300
-        ${
-          isDarkMode
-            ? "bg-[#2a482a] text-white shadow-white/10"
-            : "bg-white text-gray-800 shadow-black/25"
-        }`}
+      className={`h-full ${
+        isDarkMode ? "isDarkMode" : ""
+      } transform overflow-hidden rounded-md border-2 border-solid border-black bg-transparent bg-opacity-20 transition duration-500 hover-bg-custom`}
     >
-      <div className="flex flex-col items-center">
-        <h3 className="text-lg font-bold text-center">{project.title}</h3>
+      <div className="p-6">
+        <div className="flex flex-row items-center justify-between">
+          <div className="my-2">
+            <img src="/placeholder.svg" className="h-12 w-12" />
+          </div>
+          <div className="flex flex-row justify-between">
+            <div className="mx-1.5">
+              {href ? <HrefIcon url={href} className="icon h-6 w-6" /> : null}
+            </div>
+            <div className="mx-1.5">
+              {github ? (
+                <GitlabIcon url={github} className="icon h-6 w-6" />
+              ) : null}
+            </div>
+          </div>
+        </div>
+        <h2 className="mb-3 text-2xl font-bold leading-8 tracking-tight">
+          {title}
+        </h2>
+
+        <p className="prose mb-3 max-w-none">{description}</p>
+        <div className="flex flex-row justify-between">
+          <div
+            className={`text-sm transition duration-700 ${
+              isDarkMode ? "text-white" : ""
+            }`}
+          >
+            {tech1} &#8226; {tech2} &#8226; {tech3}
+          </div>
+        </div>
       </div>
     </div>
-  );
-};
+  </div>
+);
 
-export default ProjectCard;
+export default Card;
