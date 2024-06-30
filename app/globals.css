@@ -38,15 +38,23 @@
 }
 
 .header {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 1rem;
-  padding-bottom: 0rem;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  background: none;
+  background-color: #d2e8d2;
+  color: black;
+  transition: background-color 0.7s ease, color 0.7s ease;
+}
+
+.header.isDarkMode {
+  background-color: #152a15;
+  color: white;
+}
+
+.header .link:hover {
+  background-color: #b9d8b9;
+  transition: background-color 0.3s ease;
+}
+
+.header.isDarkMode .link:hover {
+  background-color: #456645;
 }
 
 .header .button {
@@ -54,7 +62,7 @@
   overflow: hidden;
   padding: 0.5rem;
   border-radius: 9999px;
-  background-color: #c0dfc0; /* Light mode color */
+  background-color: #aad3aa; /* Light mode color */
   color: black;
   transition: background-color 0.7s ease, color 0.7s ease;
 }

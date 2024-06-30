@@ -3,7 +3,6 @@
 import { useState } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
-import ProjectCard from "./ProjectCard";
 import CompanyInfo from "./CompanyInfo";
 import {
   GitlabIcon,
@@ -17,24 +16,6 @@ import {
 
 export default function MainPage() {
   const [isDarkMode, setIsDarkMode] = useState(false);
-
-  const projects = [
-    {
-      title: "Project 1",
-      link: "https://example.com/project1",
-      description: "Detailed description of Project 1.",
-    },
-    {
-      title: "Project 2",
-      link: "https://example.com/project2",
-      description: "Detailed description of Project 2.",
-    },
-    {
-      title: "Project 3",
-      link: "https://example.com/project2",
-      description: "Detailed description of Project 2.",
-    },
-  ];
 
   const companies = [
     {
@@ -68,7 +49,7 @@ export default function MainPage() {
     >
       <Header isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
       <main className={`flex-grow overflow-auto px-6 md:px-12 lg:px-24`}>
-        <div className="flex flex-col items-center mt-2">
+        <div className="flex flex-col items-center mt-4">
           <h1 className="text-4xl font-bold">Mihir Vador</h1>
           <p className="text-xl mt-2">Software Engineer. Builder. Audiophile</p>
           <div className="flex space-x-4 mt-4">
@@ -97,24 +78,6 @@ export default function MainPage() {
                 isDarkMode={isDarkMode}
               />
             ))}
-          </div>
-          <div className="container mt-8 mb-4">
-            <h2 className="text-3xl font-bold text-center mb-6">Projects</h2>
-            <div className="-m-4 flex flex-wrap">
-              {projects.map((project, index) => (
-                <ProjectCard
-                  key={index}
-                  title={project.title}
-                  description={project.description}
-                  href={project.link}
-                  github={project.link}
-                  tech1={project.description}
-                  tech2={project.description}
-                  tech3={project.description}
-                  isDarkMode={isDarkMode}
-                />
-              ))}
-            </div>
           </div>
         </div>
       </main>
