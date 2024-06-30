@@ -1,13 +1,15 @@
 const CompanyInfo = ({
-  logo,
+  logo: Logo,
   name,
   role,
   isDarkMode,
+  link,
 }: {
-  logo: string;
+  logo: React.ElementType;
   name: string;
   role: string;
   isDarkMode: boolean;
+  link: string;
 }) => {
   return (
     <div
@@ -15,7 +17,7 @@ const CompanyInfo = ({
         isDarkMode ? "isDarkMode" : ""
       }`}
     >
-      <img src={logo} alt={`${name} logo`} className="h-12 w-12" />
+      <Logo url={link} className="icon h-12 w-12" />
       <div>
         <h2 className="text-xl font-bold">{name}</h2>
         <p>{role}</p>

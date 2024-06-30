@@ -5,7 +5,15 @@ import Header from "./Header";
 import Footer from "./Footer";
 import ProjectCard from "./ProjectCard";
 import CompanyInfo from "./CompanyInfo";
-import { GitlabIcon, MailIcon, LinkedinIcon, FileIcon } from "./IconComponents";
+import {
+  GitlabIcon,
+  MailIcon,
+  LinkedinIcon,
+  FileIcon,
+  AVAVIcon,
+  OrigamiRiskIcon,
+  ARCIcon,
+} from "./IconComponents";
 
 export default function MainPage() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -30,21 +38,24 @@ export default function MainPage() {
 
   const companies = [
     {
-      logo: "/placeholder.svg",
-      name: "COMPANY - TEAM",
-      role: "ROLE",
+      logo: AVAVIcon,
+      name: "AeroVironment - Kinesis Team",
+      role: "Software Engineering Intern",
+      link: "https://www.avinc.com/",
     },
 
     {
-      logo: "/placeholder.svg",
-      name: "COMPANY - TEAM",
-      role: "ROLE",
+      logo: ARCIcon,
+      name: "ARC Gaming Lab - Behavior Cloning Team",
+      role: "Machine Learning Research Assistant",
+      link: "https://arc.engin.umich.edu/",
     },
 
     {
-      logo: "/placeholder.svg",
-      name: "COMPANY - TEAM",
-      role: "ROLE",
+      logo: OrigamiRiskIcon,
+      name: "Origami Risk - Infrastructure Team",
+      role: "Software Engineering Intern",
+      link: "https://www.origamirisk.com/",
     },
     // Add more companies as needed
   ];
@@ -82,6 +93,7 @@ export default function MainPage() {
                 logo={company.logo}
                 name={company.name}
                 role={company.role}
+                link={company.link}
                 isDarkMode={isDarkMode}
               />
             ))}

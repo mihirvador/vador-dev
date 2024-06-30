@@ -174,3 +174,98 @@ export function SpotifyIcon(props: SVGProps<SVGSVGElement> & { url: string }) {
     </a>
   );
 }
+
+export function AVAVIcon(props: SVGProps<SVGSVGElement> & { url: string }) {
+  return (
+    <a href={props.url} target="_blank" rel="noopener noreferrer">
+      <svg
+        {...props}
+        version="1.2"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1556 400"
+        width="1556"
+        height="400"
+        fill="currentColor"
+      >
+        <title>AVAV_BIG copy-svg</title>
+        <defs>
+          <clipPath clipPathUnits="userSpaceOnUse" id="cp1">
+            <path d="m-39.38-530.52h1735.22v1735.91h-1735.22z" />
+          </clipPath>
+        </defs>
+        <g id="Clip-Path: Clip-Path: Page 1" clipPath="url(#cp1)">
+          <g id="Clip-Path: Page 1">
+            <g id="Page 1">
+              <path
+                id="Path 1"
+                fillRule="evenodd"
+                d="m1333.4 0.5c-57.8 0-71.5 39.4-81.1 57.5l-99.6 187.2c-10.4 20-17 28.5-26.3 38.1-23.6 24.3-48.3 24.1-78.5 24.1h-39.7v-306.9h-214.7v398.9h318.5c119.3 0 136.3-33.5 182-86.5 7.5-8.8 261.8-312.4 261.8-312.4zm-1071 86.7c-7.7 8.7-262.1 312.2-262.1 312.2h222.4c58 0 71.5-39.2 81.2-57.3l18.4-34.7h195v-92h-146l32.1-60.5c10.4-20 17.1-28.6 26.3-38.1 23.8-24.3 48.4-24.2 78.5-24.2h39.7v306.8h214.8v-398.9h-318.3c-119.4 0-136.6 33.6-182 86.7z"
+              />
+            </g>
+          </g>
+        </g>
+      </svg>
+    </a>
+  );
+}
+
+export function OrigamiRiskIcon(
+  props: SVGProps<SVGSVGElement> & { url: string }
+) {
+  return (
+    <a href={props.url} target="_blank" rel="noopener noreferrer">
+      <svg
+        {...props}
+        xmlns="http://www.w3.org/2000/svg"
+        width="150"
+        height="100"
+        viewBox="0 0 150 100"
+        fill="none"
+      >
+        <defs>
+          <style>
+            {`
+            .orl-1 { fill: #fff; }
+            .orl-2 { fill: #5cbff8; }
+            .orl-2, .orl-3 { isolation: isolate; }
+            .orl-3 { fill: #0fa8f5; }
+            .orl-4 { fill: #2ab0f5; }
+          `}
+          </style>
+        </defs>
+        <g xmlns="http://www.w3.org/2000/svg">
+          <path
+            className="orl-3"
+            d="M57.24,49.03c-1,5.51-5.64,31.1-8.16,47.47l-.12,.4,.33-.06,24.38-24.18,.41-.4,.3-.57h-.21s-3.79-5.39-3.79-5.39l35.88-16.47,8.79-19.48,21.41-6.96-15.38-6.42-32.86,12.46-14.78-16.73C40.22,7.87,4.05,0,4.05,0l-.29,.07-.38,.12,.27,.24,13.65,12.37L0,11.63,57.24,49.03Zm62.41-30.84l-13.64,30.23-17.23-18.35,30.87-11.88Zm-46.32,53.68l-.22,.22-22.97,22.79c2.45-15.57,6.54-38.28,7.74-44.9l15.45,21.89ZM5.65,1.16c7.58,1.61,38.2,8,66.63,12.19l-15.14,34.47L5.65,1.16Z"
+          />
+          <path
+            className="orl-1"
+            d="M119.65,18.19l-13.64,30.23-17.23-18.35,30.87-11.88Zm-46.32,53.68l-.22,.22-22.97,22.79c2.45-15.57,6.54-38.28,7.74-44.9l15.45,21.89ZM5.65,1.16c7.58,1.61,38.2,8,66.63,12.19l-15.14,34.47L5.65,1.16Z"
+          />
+          <polygon
+            className="orl-2"
+            points="70.08 65.33 88.38 30.85 105.69 49.23 70.08 65.33"
+          />
+          <polygon
+            className="orl-2"
+            points="129.81 24.7 130.54 21.97 134.12 23.32 129.81 24.7"
+          />
+          <polygon
+            className="orl-2"
+            points="129.82 24.71 130.59 21.84 134.2 23.31 129.82 24.71"
+          />
+        </g>
+      </svg>
+    </a>
+  );
+}
+
+export function ARCIcon(
+  props: React.ImgHTMLAttributes<HTMLImageElement> & { url: string }
+) {
+  return (
+    <a href={props.url} target="_blank" rel="noopener noreferrer">
+      <img {...props} src="/ARClogo.png"></img>
+    </a>
+  );
+}
