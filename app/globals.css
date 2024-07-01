@@ -23,14 +23,6 @@
   transition: color 0.7s ease;
 }
 
-.icon {
-  transition: transform 0.5s;
-}
-
-.icon:hover {
-  transform: scale(1.1);
-}
-
 .icon-no-hover {
   transition: color 0.7s ease;
   color: black;
@@ -200,4 +192,25 @@
   50% {
     opacity: 1;
   }
+}
+
+.underline-effect {
+  position: relative;
+  cursor: pointer;
+  transition: color 0.7s ease;
+}
+
+.underline-effect::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 1px; /* Adjust as needed */
+  width: 0;
+  height: 2px; /* Adjust thickness of the underline */
+  background-color: currentColor; /* Use the text color for the underline */
+  transition: width 0.3s ease-in-out;
+}
+
+.underline-effect:hover::after {
+  width: 100%;
 }

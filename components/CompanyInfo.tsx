@@ -19,7 +19,9 @@ const CompanyInfo = ({
     >
       <Logo url={link} className="icon h-12 w-12" />
       <div>
-        <h2 className="text-xl font-bold">{name}</h2>
+        <a href={link} target="_blank" rel="noopener noreferrer">
+          <h2 className="underline-effect text-xl font-bold">{name}</h2>
+        </a>
         <p>{role}</p>
       </div>
     </div>

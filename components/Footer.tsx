@@ -50,31 +50,32 @@ const Footer = ({ isDarkMode }: { isDarkMode: boolean }) => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <p className="icon text-sm font-bold">{track.item.name}</p>
+                <p className="underline-effect text-sm font-bold">
+                  {track.item.name}
+                </p>
               </a>
               <a
-                href={track.artists[0].external_urls.spotify}
+                href={track.item.artists[0].external_urls.spotify}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <p className="icon text-sm font-bold">
+                <p className="underline-effect text-sm font-bold">
                   {track.item.artists[0].name}
                 </p>
               </a>
-            </div>
-            <div className="text-right">
-              <p className="text-xs font-bold">made by Mihir Vador</p>
             </div>
           </>
         ) : (
           <>
             <SpotifyIcon url="https://spotify.com" className="h-12 w-12" />
-            <div className="flex justify-between w-full">
+            <div>
               <p className="text-sm font-bold">Tunes are on pause</p>
-              <p className="text-xs font-bold">made by Mihir Vador</p>
             </div>
           </>
         )}
+      </div>
+      <div className="text-right">
+        <p className="text-sm font-bold">made by Mihir Vador</p>
       </div>
     </footer>
   );
