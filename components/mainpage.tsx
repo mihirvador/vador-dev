@@ -27,7 +27,7 @@ export default function MainPage() {
 
     {
       logo: ARCIcon,
-      name: "ARC Gaming Lab - Behavior Cloning Team",
+      name: "ARC Lab - Behavior Cloning Team",
       role: "Machine Learning Research Assistant",
       link: "https://arc.engin.umich.edu/",
     },

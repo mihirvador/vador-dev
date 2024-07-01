@@ -34,8 +34,17 @@ const Header = ({
           </div>
         </Link>
         <Link
+          href="/building"
+          className={`link text-bold px-4 py-2 rounded-md ${
+            isDarkMode ? "isDarkMode" : ""
+          }`}
+          prefetch={false}
+        >
+          Actively Building
+        </Link>
+        <Link
           href="/projects"
-          className={`link px-4 py-2 rounded-md ${
+          className={`link text-bold px-4 py-2 rounded-md ${
             isDarkMode ? "isDarkMode" : ""
           }`}
           prefetch={false}

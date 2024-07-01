@@ -4,7 +4,12 @@ import { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ProjectCard from "../components/ProjectCard";
-import { NeuralNetworkIcon } from "../components/IconComponents";
+import {
+  NeuralNetworkIcon,
+  LatexIcon,
+  StockIcon,
+  MudslideIcon,
+} from "../components/IconComponents";
 
 export default function Projects() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -31,7 +36,7 @@ export default function Projects() {
       tech1: "Python",
       tech2: "Pytorch",
       tech3: "Matplotlib",
-      logo: NeuralNetworkIcon,
+      logo: LatexIcon,
     },
     {
       title: "Financial Models",
@@ -42,7 +47,7 @@ export default function Projects() {
       tech1: "Python",
       tech2: "SciPy",
       tech3: "Numpy",
-      logo: NeuralNetworkIcon,
+      logo: StockIcon,
     },
     {
       title: "Predicting Mudslides",
@@ -53,7 +58,7 @@ export default function Projects() {
       tech1: "R",
       tech2: "Web Scraping",
       tech3: "Mathematical Modeling",
-      logo: NeuralNetworkIcon,
+      logo: MudslideIcon,
     },
   ];
 

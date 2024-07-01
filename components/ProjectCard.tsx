@@ -1,10 +1,12 @@
-import { GitlabIcon, HrefIcon } from "./IconComponents";
+import { GitlabIcon, HrefIcon, InstaIcon, TwitterIcon } from "./IconComponents";
 
 interface CardProps {
   title: string;
   description: string;
   href?: string;
   github?: string;
+  updateInsta?: string;
+  updateTwitter?: string;
   tech1: string;
   tech2: string;
   tech3: string;
@@ -17,6 +19,8 @@ const Card = ({
   description,
   href,
   github,
+  updateInsta,
+  updateTwitter,
   tech1,
   tech2,
   tech3,
@@ -45,6 +49,16 @@ const Card = ({
             <div className="mx-1.5">
               {github ? (
                 <GitlabIcon url={github} className="icon h-6 w-6" />
+              ) : null}
+            </div>
+            <div className="mx-1.5">
+              {updateInsta ? (
+                <InstaIcon url={updateInsta} className="icon h-6 w-6" />
+              ) : null}
+            </div>
+            <div className="mx-1.5">
+              {updateTwitter ? (
+                <TwitterIcon url={updateTwitter} className="icon h-6 w-6" />
               ) : null}
             </div>
           </div>

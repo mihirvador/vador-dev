@@ -34,7 +34,7 @@ const Footer = ({ isDarkMode }: { isDarkMode: boolean }) => {
         {track && track.item ? (
           <>
             <a
-              href={track.item.external_urls.spotify}
+              href={track.item.album.external_urls.spotify}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -45,9 +45,15 @@ const Footer = ({ isDarkMode }: { isDarkMode: boolean }) => {
               />
             </a>
             <div>
-              <p className="text-sm font-bold">
-                {track.item.name} - {track.item.artists[0].name}
-              </p>
+              <a
+                href={track.item.external_urls.spotify}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <p className="icon text-sm font-bold">
+                  {track.item.name} - {track.item.artists[0].name}
+                </p>
+              </a>
               <p className="text-xs font-bold">made by Mihir Vador</p>
             </div>
           </>
