@@ -47,7 +47,11 @@ export default function MainPage() {
         isDarkMode ? "isDarkMode" : ""
       } font-mono`}
     >
-      <Header isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
+      <Header
+        currentPage=""
+        isDarkMode={isDarkMode}
+        setIsDarkMode={setIsDarkMode}
+      />
       <main className={`flex-grow overflow-auto px-6 md:px-12 lg:px-24`}>
         <div className="flex flex-col items-center mt-4">
           <h1 className="text-4xl font-bold">Mihir Vador</h1>

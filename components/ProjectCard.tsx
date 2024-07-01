@@ -9,6 +9,7 @@ interface CardProps {
   tech2: string;
   tech3: string;
   isDarkMode: boolean;
+  logo: React.ElementType;
 }
 
 const Card = ({
@@ -20,6 +21,7 @@ const Card = ({
   tech2,
   tech3,
   isDarkMode,
+  logo: Logo,
 }: CardProps) => (
   <div className="md p-4 md:w-1/3" style={{ maxWidth: "544px" }}>
     <div
@@ -30,7 +32,11 @@ const Card = ({
       <div className="p-6">
         <div className="flex flex-row items-center justify-between">
           <div className="my-2">
-            <img src="/placeholder.svg" className="h-12 w-12" />
+            <Logo
+              className={`${
+                isDarkMode ? "isDarkMode" : ""
+              } icon-no-hover h-12 w-12`}
+            />
           </div>
           <div className="flex flex-row justify-between">
             <div className="mx-1.5">

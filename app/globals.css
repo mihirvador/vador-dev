@@ -18,7 +18,8 @@
 .main-container h2,
 .main-container p,
 .main-container h1,
-.main-container .icon {
+.main-container .icon,
+.main-container .icon-no-hover {
   transition: color 0.7s ease;
 }
 
@@ -28,6 +29,15 @@
 
 .icon:hover {
   transform: scale(1.1);
+}
+
+.icon-no-hover {
+  transition: color 0.7s ease;
+  color: black;
+}
+
+.icon-no-hover.isDarkMode {
+  color: white; /* Adjust based on your theme colors */
 }
 
 .main-container.isDarkMode h2,
@@ -64,7 +74,11 @@
   border-radius: 9999px;
   background-color: #aad3aa; /* Light mode color */
   color: black;
-  transition: background-color 0.7s ease, color 0.7s ease;
+  transition: background-color 0.7s ease, color 0.7s ease, transform 0.5s;
+}
+
+.header .button:hover {
+  transform: scale(1.1);
 }
 
 .header.isDarkMode .button {

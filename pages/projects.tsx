@@ -4,6 +4,7 @@ import { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ProjectCard from "../components/ProjectCard";
+import { NeuralNetworkIcon } from "../components/IconComponents";
 
 export default function Projects() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -19,26 +20,40 @@ export default function Projects() {
       tech1: "Python",
       tech2: "Tensorflow",
       tech3: "Cuda",
+      logo: NeuralNetworkIcon,
     },
     {
-      title: "Project 2",
+      title: "Handwriting to Latex",
       link: "",
-      github:
-        "https://github.com/mihirvador/Diagnosing-Multiple-Sclerosis-Using-Machine-Learning",
-      description: "Detailed description of Project 2.",
+      github: "https://github.com/rrseelam/image_to_LaTeX_translation",
+      description:
+        "Digitized handwritten math by capturing images of handwritten symbols, using bounding boxes for detection, and classifying each with a trained model to convert into LaTeX. We improved efficiency by adopting FloodFill for symbol detection over traditional machine learning, overcoming challenges in model accuracy due to similar symbols and characters.",
       tech1: "Python",
-      tech2: "Tensorflow",
-      tech3: "Cuda",
+      tech2: "Pytorch",
+      tech3: "Matplotlib",
+      logo: NeuralNetworkIcon,
     },
     {
-      title: "Project 3",
-      link: "https://example.com/project2",
-      github:
-        "https://github.com/mihirvador/Diagnosing-Multiple-Sclerosis-Using-Machine-Learning",
-      description: "Detailed description of Project 2.",
+      title: "Financial Models",
+      link: "",
+      github: "https://github.com/mihirvador/Financial-Algorithms",
+      description:
+        "The Bollinger Bands algorithm generated a 43.23% profit on Microsoft stock using moving averages and standard deviations. The EMA10 RSI14 strategy yielded a 242.41% profit on Tesla by utilizing market condition indicators. The LSTM Machine Learning model accurately forecasted Google's closing prices, showcasing the power of neural networks in analyzing market dynamics.",
       tech1: "Python",
-      tech2: "Tensorflow",
-      tech3: "Cuda",
+      tech2: "SciPy",
+      tech3: "Numpy",
+      logo: NeuralNetworkIcon,
+    },
+    {
+      title: "Predicting Mudslides",
+      link: "",
+      github: "https://github.com/mihirvador/Predicting-Mudslides",
+      description:
+        "The custom-developed method for predicting mudslides outperforms the Mohr-Coulomb method by 32%. It slightly underperforming compared to 2D modeling, but is nearly 10x faster. This demonstrates the model's effectiveness and efficiency in improving mudslide prediction accuracy and speed across various U.S. locations.",
+      tech1: "R",
+      tech2: "Web Scraping",
+      tech3: "Mathematical Modeling",
+      logo: NeuralNetworkIcon,
     },
   ];
 
@@ -48,7 +63,11 @@ export default function Projects() {
         isDarkMode ? "isDarkMode" : ""
       } font-mono`}
     >
-      <Header isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
+      <Header
+        currentPage="projects"
+        isDarkMode={isDarkMode}
+        setIsDarkMode={setIsDarkMode}
+      />
       <main className={`flex-grow overflow-auto px-6 md:px-12 lg:px-24`}>
         <div className="flex flex-col items-center mt-4">
           <div className="container mt-8 mb-4">
@@ -65,6 +84,7 @@ export default function Projects() {
                   tech2={project.tech2}
                   tech3={project.tech3}
                   isDarkMode={isDarkMode}
+                  logo={project.logo}
                 />
               ))}
             </div>

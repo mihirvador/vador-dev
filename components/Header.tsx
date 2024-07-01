@@ -4,9 +4,11 @@ import Link from "next/link";
 const Header = ({
   isDarkMode,
   setIsDarkMode,
+  currentPage,
 }: {
   isDarkMode: boolean;
   setIsDarkMode: (value: boolean) => void;
+  currentPage: string;
 }) => {
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);
@@ -27,17 +29,9 @@ const Header = ({
           prefetch={false}
         >
           <div className="text typing-animation">
-            {">"}_ MV<span className="cursor"></span>
+            {">"}_ MV / {currentPage}
+            <span className="cursor"></span>
           </div>
-        </Link>
-        <Link
-          href="/about"
-          className={`link px-4 py-2 rounded-md ${
-            isDarkMode ? "isDarkMode" : ""
-          }`}
-          prefetch={false}
-        >
-          About
         </Link>
         <Link
           href="/projects"
@@ -47,15 +41,6 @@ const Header = ({
           prefetch={false}
         >
           Projects
-        </Link>
-        <Link
-          href="/contact"
-          className={`link px-4 py-2 rounded-md ${
-            isDarkMode ? "isDarkMode" : ""
-          }`}
-          prefetch={false}
-        >
-          Contact
         </Link>
       </nav>
       <button onClick={toggleDarkMode} className="button">
