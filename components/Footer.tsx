@@ -45,24 +45,28 @@ const Footer = ({ isDarkMode }: { isDarkMode: boolean }) => {
               />
             </a>
             <div className="flex flex-col justify-between h-full">
-              <a
-                href={track.item.external_urls.spotify}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <p className="underline-effect text-sm font-bold">
-                  {track.item.name}
-                </p>
-              </a>
-              <a
-                href={track.item.artists[0].external_urls.spotify}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <p className="underline-effect text-sm font-bold">
-                  {track.item.artists[0].name}
-                </p>
-              </a>
+              <div>
+                <a
+                  href={track.item.external_urls.spotify}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <p className="underline-effect text-sm font-bold">
+                    {track.item.name}
+                  </p>
+                </a>
+              </div>
+              <div>
+                <a
+                  href={track.item.artists[0].external_urls.spotify}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <p className="underline-effect text-sm font-bold">
+                    {track.item.artists[0].name}
+                  </p>
+                </a>
+              </div>
             </div>
           </>
         ) : (
