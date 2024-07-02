@@ -55,7 +55,9 @@ export default function MainPage() {
       <main className={`flex-grow overflow-auto px-6 md:px-12 lg:px-24`}>
         <div className="flex flex-col items-center mt-4">
           <h1 className="text-4xl font-bold">Mihir Vador</h1>
-          <p className="text-xl mt-2">Software Engineer. Builder. Audiophile</p>
+          <p className="text-xl mt-2">
+            Software Engineer. Builder. Audiophile.
+          </p>
           <div className="flex space-x-4 mt-4">
             <GitHubIcon
               url="https://github.com/mihirvador"
