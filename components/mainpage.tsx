@@ -5,7 +5,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import CompanyInfo from "./CompanyInfo";
 import {
-  GitlabIcon,
+  GitHubIcon,
   MailIcon,
   LinkedinIcon,
   FileIcon,
@@ -57,7 +57,7 @@ export default function MainPage() {
           <h1 className="text-4xl font-bold">Mihir Vador</h1>
           <p className="text-xl mt-2">Software Engineer. Builder. Audiophile</p>
           <div className="flex space-x-4 mt-4">
-            <GitlabIcon
+            <GitHubIcon
               url="https://github.com/mihirvador"
               className="icon h-6 w-6"
             />

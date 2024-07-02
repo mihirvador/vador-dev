@@ -20,7 +20,13 @@ const Footer = ({ isDarkMode }: { isDarkMode: boolean }) => {
     };
 
     fetchSpotifyData();
-  }, []);
+
+    // Set up an interval to fetch Spotify data every minute (60000 milliseconds)
+    const intervalId = setInterval(fetchSpotifyData, 1000); // Adjust the interval as needed
+
+    // Clear the interval when the component unmounts
+    return () => clearInterval(intervalId);
+  }, [refreshToken]);
 
   return (
     <footer

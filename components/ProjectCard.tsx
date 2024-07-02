@@ -1,4 +1,4 @@
-import { GitlabIcon, HrefIcon, InstaIcon, TwitterIcon } from "./IconComponents";
+import { GitHubIcon, HrefIcon, InstaIcon, TwitterIcon } from "./IconComponents";
 
 interface CardProps {
   title: string;
@@ -48,7 +48,7 @@ const Card = ({
             </div>
             <div className="mx-1.5">
               {github ? (
-                <GitlabIcon url={github} className="icon h-6 w-6" />
+                <GitHubIcon url={github} className="icon h-6 w-6" />
               ) : null}
             </div>
             <div className="mx-1.5">
