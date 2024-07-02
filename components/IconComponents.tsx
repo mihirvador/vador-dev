@@ -1,4 +1,4 @@
-import { SVGProps } from "react";
+import { SVGProps, CSSProperties } from "react";
 
 export function FileIcon(props: SVGProps<SVGSVGElement> & { url: string }) {
   return (
@@ -263,9 +263,17 @@ export function OrigamiRiskIcon(
 export function ARCIcon(
   props: React.ImgHTMLAttributes<HTMLImageElement> & { url: string }
 ) {
+  const imgStyle: CSSProperties = {
+    width: "100%",
+    height: "100%",
+    objectFit: "fill",
+  };
+
   return (
     <a href={props.url} target="_blank" rel="noopener noreferrer">
-      <img {...props} src="/ARClogo.png"></img>
+      <div className="h-12 w-12">
+        <img {...props} style={imgStyle} src="/ARClogo.png"></img>
+      </div>
     </a>
   );
 }

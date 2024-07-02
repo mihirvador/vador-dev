@@ -16,45 +16,47 @@ const Header = ({
 
   return (
     <header
-      className={`header flex justify-between items-center p-6 ${
+      className={`header flex justify-between items-center p-2 sm:p-6 ${
         isDarkMode ? "isDarkMode" : ""
       }`}
     >
-      <nav className="flex items-center space-x-4">
-        <Link
-          href="/"
-          className={`link px-4 py-2 rounded-md ${
+      <nav className="flex items-center space-x-1 sm:space-x-4">
+        <div
+          className={`link px-2 py-1 sm:px-4 sm:py-2 rounded-md ${
             isDarkMode ? "isDarkMode" : ""
           }`}
-          prefetch={false}
         >
-          <div className="text typing-animation">
-            {">"}_ MV / {currentPage}
-            <span className="cursor"></span>
-          </div>
-        </Link>
-        <Link
-          href="/building"
-          className={`link text-bold px-4 py-2 rounded-md ${
+          <Link href="/" prefetch={false}>
+            <div className="text typing-animation">
+              {">"}_ MV / {currentPage}
+              <span className="cursor"></span>
+            </div>
+          </Link>
+        </div>
+        <div
+          className={`link text-bold px-2 py-1 sm:px-4 sm:py-2 rounded-md ${
             isDarkMode ? "isDarkMode" : ""
           }`}
-          prefetch={false}
         >
-          Actively Building
-        </Link>
-        <Link
-          href="/projects"
-          className={`link text-bold px-4 py-2 rounded-md ${
+          <Link href="/building" prefetch={false}>
+            Actively Building
+          </Link>
+        </div>
+        <div
+          className={`link text-bold px-2 py-1 sm:px-4 sm:py-2 rounded-md ${
             isDarkMode ? "isDarkMode" : ""
           }`}
-          prefetch={false}
         >
-          Projects
-        </Link>
+          <Link href="/projects" prefetch={false}>
+            Projects
+          </Link>
+        </div>
       </nav>
-      <button onClick={toggleDarkMode} className="button">
-        <SunMoonIcon className="h-6 w-6 z-10 relative" />
-      </button>
+      <div>
+        <button onClick={toggleDarkMode} className="button">
+          <SunMoonIcon className="h-6 w-6 z-10 relative" />
+        </button>
+      </div>
     </header>
   );
 };

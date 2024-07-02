@@ -198,6 +198,7 @@
   position: relative;
   cursor: pointer;
   transition: color 0.7s ease;
+  display: inline-block;
 }
 
 .underline-effect::after {

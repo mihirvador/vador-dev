@@ -13,7 +13,7 @@ const CompanyInfo = ({
 }) => {
   return (
     <div
-      className={`flex items-center space-x-4 company-info ${
+      className={`flex items-center space-x-4 sm:items-start sm:text-left company-info ${
         isDarkMode ? "isDarkMode" : ""
       }`}
     >

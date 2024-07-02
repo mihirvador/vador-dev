@@ -1,30 +1,26 @@
 import { useEffect, useState } from "react";
 import { getCurrentlyPlayingTrack, refreshAccessToken } from "../lib/spotify";
 import { SpotifyIcon } from "./IconComponents";
+
 const Footer = ({ isDarkMode }: { isDarkMode: boolean }) => {
   const [track, setTrack] = useState<any>(null);
-  const [accessToken, setAccessToken] = useState<string | null>(null);
   const refreshToken = process.env.SPOTIFY_REFRESH_TOKEN;
 
   useEffect(() => {
-    const fetchAccessToken = async () => {
+    const fetchSpotifyData = async () => {
       if (refreshToken) {
         const newAccessToken = await refreshAccessToken(refreshToken);
-        setAccessToken(newAccessToken);
+        if (newAccessToken) {
+          const currentlyPlayingTrack = await getCurrentlyPlayingTrack(
+            newAccessToken
+          );
+          setTrack(currentlyPlayingTrack);
+        }
       }
     };
 
-    const fetchTrack = async () => {
-      if (accessToken) {
-        const currentlyPlayingTrack = await getCurrentlyPlayingTrack(
-          accessToken
-        );
-        setTrack(currentlyPlayingTrack);
-      }
-    };
-
-    fetchAccessToken().then(fetchTrack);
-  }, [accessToken]);
+    fetchSpotifyData();
+  }, []);
 
   return (
     <footer
