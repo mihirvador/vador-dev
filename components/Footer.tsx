@@ -38,7 +38,11 @@ const Footer = ({ isDarkMode }: { isDarkMode: boolean }) => {
       className={`footer w-full p-6 mt-8 ${isDarkMode ? "isDarkMode" : ""}`}
     >
       <div className="flex items-center space-x-4">
-        {track && track.item ? (
+        {track &&
+        track.item &&
+        track.item.album &&
+        track.item.album.images &&
+        track.item.album.images.length > 0 ? (
           <>
             <a
               href={track.item.album.external_urls.spotify}
