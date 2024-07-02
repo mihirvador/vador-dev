@@ -8,14 +8,19 @@ const Footer = ({ isDarkMode }: { isDarkMode: boolean }) => {
 
   useEffect(() => {
     const fetchSpotifyData = async () => {
-      if (refreshToken) {
-        const newAccessToken = await refreshAccessToken(refreshToken);
-        if (newAccessToken) {
-          const currentlyPlayingTrack = await getCurrentlyPlayingTrack(
-            newAccessToken
-          );
-          setTrack(currentlyPlayingTrack);
+      try {
+        if (refreshToken) {
+          const newAccessToken = await refreshAccessToken(refreshToken);
+          if (newAccessToken) {
+            const currentlyPlayingTrack = await getCurrentlyPlayingTrack(
+              newAccessToken
+            );
+            setTrack(currentlyPlayingTrack);
+          }
         }
+      } catch (error) {
+        console.error("Failed to fetch Spotify data:", error);
+        setTrack(null);
       }
     };
 
