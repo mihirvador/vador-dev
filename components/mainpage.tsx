@@ -65,7 +65,7 @@ export default function MainPage() {
             />
             <MailIcon email="mvador@umich.edu" className="icon h-6 w-6" />
             <LinkedinIcon
-              url="https://www.linkedin.com/in/mihir-vador-166b3b173/"
+              url="https://www.linkedin.com/in/mihirvador/"
               className="icon h-6 w-6"
             />
             <FileIcon
