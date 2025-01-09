@@ -12,12 +12,19 @@ import {
   AVAVIcon,
   OrigamiRiskIcon,
   ARCIcon,
+  AppleIcon,
 } from "./IconComponents";
 
 export default function MainPage() {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   const companies = [
+    {
+      logo: AppleIcon,
+      name: "Apple - Tools and Frameworks Team",
+      role: "Software Engineering Intern",
+      link: "https://www.apple.com/",
+    },
     {
       logo: AVAVIcon,
       name: "AeroVironment - Kinesis Team",
@@ -27,7 +34,7 @@ export default function MainPage() {
 
     {
       logo: ARCIcon,
-      name: "ARC Lab - Behavior Cloning Team",
+      name: "Automotive Research Center - Behavior Cloning Team",
       role: "Machine Learning Research Assistant",
       link: "https://arc.engin.umich.edu/",
     },
@@ -68,10 +75,7 @@ export default function MainPage() {
               url="https://www.linkedin.com/in/mihirvador/"
               className="icon h-6 w-6"
             />
-            <FileIcon
-              url="/Mihir_Vador_Resume_2026.pdf"
-              className="icon h-6 w-6"
-            />
+            <FileIcon url="/Mihir_Vador_Resume.pdf" className="icon h-6 w-6" />
           </div>
           <div className="mt-8 space-y-8">
             {companies.map((company, index) => (
