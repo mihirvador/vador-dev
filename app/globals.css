@@ -2,216 +2,73 @@
 @tailwind components;
 @tailwind utilities;
 
-.main-container {
-  position: relative;
-  overflow: hidden;
-  background: linear-gradient(to top right, #f0f8f0 50%, #0a1f0a 50%);
-  background-position: 0% 100%;
-  background-size: 200% 200%;
-  transition: background-position 0.7s ease-in-out;
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 224.3 76.3% 48%;
+  }
 }
 
-.main-container.isDarkMode {
-  background-position: 100% 0%;
+@layer utilities {
+  .bg-grid-white {
+    background-image: linear-gradient(to right, #ffffff1a 1px, transparent 1px),
+      linear-gradient(to bottom, #ffffff1a 1px, transparent 1px);
+  }
 }
 
-.main-container h2,
-.main-container p,
-.main-container h1,
-.main-container .icon,
-.main-container .icon-no-hover {
-  transition: color 0.7s ease;
-}
-
-.icon-no-hover {
-  transition: color 0.7s ease;
-  color: black;
-}
-
-.icon-no-hover.isDarkMode {
-  color: white; /* Adjust based on your theme colors */
-}
-
-.main-container.isDarkMode h2,
-.main-container.isDarkMode p,
-.main-container.isDarkMode h1,
-.main-container.isDarkMode .icon {
-  color: white; /* Adjust based on your theme colors */
-}
-
-.header {
-  background-color: #d2e8d2;
-  color: black;
-  transition: background-color 0.7s ease, color 0.7s ease;
-}
-
-.header.isDarkMode {
-  background-color: #152a15;
-  color: white;
-}
-
-.header .link:hover {
-  background-color: #b9d8b9;
-  transition: background-color 0.3s ease;
-}
-
-.header.isDarkMode .link:hover {
-  background-color: #456645;
-}
-
-.header .button {
-  position: relative;
-  overflow: hidden;
-  padding: 0.5rem;
-  border-radius: 9999px;
-  background-color: #aad3aa; /* Light mode color */
-  color: black;
-  transition: background-color 0.7s ease, color 0.7s ease, transform 0.5s;
-}
-
-.header .button:hover {
-  transform: scale(1.1);
-}
-
-.header.isDarkMode .button {
-  background-color: #6b9d6b; /* Dark mode color */
-  color: white;
-}
-
-.header .text {
-  font-size: 1rem;
-  font-weight: bold;
-  color: black; /* Light mode color */
-  transition: color 0.7s ease;
-}
-
-.header.isDarkMode .text {
-  color: white; /* Dark mode color */
-}
-
-.company-info {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  background: none;
-}
-
-.company-info h2,
-.company-info p {
-  transition: color 0.7s ease;
-}
-
-.company-info.isDarkMode h2,
-.company-info.isDarkMode p {
-  color: white; /* Adjust based on your theme colors */
-}
-
-.footer {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.5rem;
-  background-color: #d2e8d2;
-  transition: background-color 0.7s ease;
-}
-
-.footer.isDarkMode {
-  background-color: #152a15;
-}
-
-.footer p {
-  transition: color 0.7s ease;
-}
-
-.footer.isDarkMode p {
-  color: white; /* Adjust based on your theme colors */
-}
-
-.footer .icon {
-  transition: color 0.7s ease;
-}
-
-.footer.isDarkMode .icon {
-  color: white; /* Adjust based on your theme colors */
-}
-
-.hover-bg-custom {
-  transition: background-color 0.5s, transform 0.5s;
-  border-color: #c0dfc0;
-}
-
-.hover-bg-custom:hover {
-  background-color: #d2e8d2 !important; /* Replace #hexcolor with your chosen hex color */
-  transform: scale(1.05);
-  border-radius: 0.375rem;
-  border-style: solid;
-  border-width: 2px;
-}
-
-.hover-bg-custom.isDarkMode {
-  transition: background-color 0.5s, transform 0.5s, border-color 0.5s;
-  border-color: #456645;
-}
-
-.hover-bg-custom:hover.isDarkMode {
-  background-color: #152a15 !important; /* Replace #hexcolor with your chosen hex color */
-  transform: scale(1.05);
-  border-radius: 0.375rem;
-  border-style: solid;
-  border-width: 2px;
-}
-
-/* Blinking cursor effect */
-@keyframes blink-cursor {
-  from,
-  to {
-    border-color: transparent;
+@keyframes float {
+  0% {
+    transform: translateY(0px);
   }
   50% {
-    border-color: black;
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
   }
 }
 
-.typing-animation .cursor {
-  display: inline-block;
-  width: 0.15em;
-  height: 1.25em; /* Adjust height to match your text */
-  background-color: currentColor; /* Matches the text color */
-  margin-left: 0.2em; /* Adjust the space between the text and the cursor */
-  animation: blink-cursor 0.75s step-end infinite;
-  position: relative;
-  top: 5px;
+.animate-float {
+  animation: float 6s ease-in-out infinite;
 }
 
-@keyframes blink-cursor {
-  from,
-  to {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-}
-
-.underline-effect {
-  position: relative;
-  cursor: pointer;
-  transition: color 0.7s ease;
-  display: inline-block;
-}
-
-.underline-effect::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 1px; /* Adjust as needed */
-  width: 0;
-  height: 2px; /* Adjust thickness of the underline */
-  background-color: currentColor; /* Use the text color for the underline */
-  transition: width 0.3s ease-in-out;
-}
-
-.underline-effect:hover::after {
-  width: 100%;
-}

@@ -1,21 +1,29 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import "./globals.css"
+import type { Metadata } from "next"
+import { Inter } from "next/font/google"
+import { ThemeProvider } from "./theme-provider"
+import type React from "react" // Added import for React
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Mihir Vador",
-  description: "Mihir Vador's personal website",
-};
+  title: "Your Name - ML Engineer & Roboticist",
+  description: "Personal portfolio of an Infrastructure ML Engineer and Roboticist",
+}
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: {
+  children: React.ReactNode
+}) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <body className={inter.className}>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
-  );
+  )
 }
+

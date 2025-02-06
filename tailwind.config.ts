@@ -1,29 +1,56 @@
-// tailwind.config.js
-module.exports = {
+import { type Config } from "tailwindcss"
+
+export default {
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx}", // Path to all JavaScript/TypeScript files in the pages directory
-    "./components/**/*.{js,ts,jsx,tsx}", // Path to all JavaScript/TypeScript files in the components directory
-    "./layout/**/*.{js,ts,jsx,tsx}", // Include additional directories as needed
-  ],
+    './pages/**/*.{ts,tsx}',
+    './components/**/*.{ts,tsx}',
+    './app/**/*.{ts,tsx}',
+    './src/**/*.{ts,tsx}',
+	],
+  darkMode: ["class"],
   theme: {
     extend: {
       colors: {
-        peach: "#EF9C66",
-        lemon: "#FCDC94",
-        sage: "#C8CFA0",
-        teal: "#78ABA8",
-      },
-      boxShadow: {
-        xl: "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1)",
-        "2xl": "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
-      },
-      transitionProperty: {
-        all: "all",
-        height: "height",
-        width: "width",
-        spacing: "margin, padding",
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+        primary: {
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
+        },
+        secondary: {
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
+        },
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
+        },
+        muted: {
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
+        },
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
+        },
+        popover: {
+          DEFAULT: "hsl(var(--popover))",
+          foreground: "hsl(var(--popover-foreground))",
+        },
+        card: {
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
+        },
+        theme: {
+          pink: "#FFE4E6",
+          turquoise: "#2DD4BF",
+        },
       },
     },
   },
   plugins: [],
-};
+} satisfies Config
+
