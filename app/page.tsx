@@ -55,7 +55,7 @@ export default function Page() {
                     size="icon"
                     className="rounded-full hover:bg-theme-turquoise/10 dark:hover:bg-theme-pink/10"
                   >
-                    <Github className="h-5 w-5" />
+                    <Github className="!h-6 !w-6" />
                     <span className="sr-only">GitHub</span>
                   </Button>
                 </Link>
@@ -65,7 +65,7 @@ export default function Page() {
                     size="icon"
                     className="rounded-full hover:bg-theme-turquoise/10 dark:hover:bg-theme-pink/10"
                   >
-                    <Linkedin className="h-5 w-5" />
+                    <Linkedin className="!h-6 !w-6" />
                     <span className="sr-only">LinkedIn</span>
                   </Button>
                 </Link>
@@ -75,7 +75,7 @@ export default function Page() {
                     size="icon"
                     className="rounded-full hover:bg-theme-turquoise/10 dark:hover:bg-theme-pink/10"
                   >
-                    <Mail className="h-5 w-5" />
+                    <Mail className="!h-6 !w-6" />
                     <span className="sr-only">Email</span>
                   </Button>
                 </Link>
@@ -85,7 +85,7 @@ export default function Page() {
                     size="icon"
                     className="rounded-full hover:bg-theme-turquoise/10 dark:hover:bg-theme-pink/10"
                   >
-                    <File className="h-5 w-5" />
+                    <File className="!h-6 !w-6" />
                     <span className="sr-only">Resume</span>
                   </Button>
                 </Link>
