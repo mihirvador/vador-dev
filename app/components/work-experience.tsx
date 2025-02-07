@@ -16,6 +16,12 @@ export function WorkExperience() {
       title: "Software Engineering Intern",
     },
     {
+        logo: <ARCIcon url="https://www.arc.com/" className="h-12 w-12" />,
+        company: "Automative Research Center",
+        team: "Behavioral Cloning Team",
+        title: "Machine Learning Research Assistant",
+      },
+    {
       logo: <OrigamiRiskIcon url="https://www.origamirisk.com/" className="h-12 w-12" />,
       company: "Origami Risk",
       team: "Infrastructure Team",
