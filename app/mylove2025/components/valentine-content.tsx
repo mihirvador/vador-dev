@@ -185,12 +185,12 @@ export default function ValentineContent({ imageUrls }: ValentineContentProps) {
 								And hopefully many more to come
 							</li>
 							<li className="transform -rotate-1">
-								To the world's most special girl
+								To the world&apos;s most special girl
 							</li>
 							<li className="transform rotate-2">I love you Amulya</li>
 						</ul>
 						<p className="font-crayon text-xl text-pink-600 mt-6 transform rotate-3">
-							❤️ Happy Valentine's Day ❤️
+							❤️ Happy Valentine&apos;s Day ❤️
 						</p>
 					</div>
 				</div>

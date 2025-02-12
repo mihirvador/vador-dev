@@ -18,7 +18,7 @@ export default function PasswordEntry({ onSubmit, error }: PasswordEntryProps) {
 	return (
 		<div className="relative z-10 p-6">
 			<h1 className="text-3xl font-bold text-center mb-6 text-pink-600 font-crayon transform -rotate-2">
-				What's the password?
+				What&apos;s the password?
 			</h1>
 			<form onSubmit={handleSubmit} className="space-y-4">
 				<div className="relative">
