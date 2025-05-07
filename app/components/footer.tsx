@@ -54,6 +54,8 @@ export function Footer() {
 								src={track.item.album.images[0].url}
 								alt="Album Art"
 								className="icon h-12 w-12"
+								width={480}
+								height={480}
 							/>
 						</a>
 						<div className="flex flex-col justify-between h-full">

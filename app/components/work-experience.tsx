@@ -6,7 +6,7 @@ export function WorkExperience() {
 		{
 			logo: <AppleIcon url="https://www.apple.com" className="h-12 w-12" />,
 			company: "Apple",
-			team: "Tools and Frameworks Team",
+			team: "Omega (Distrubuted Infrastructure) Team",
 			title: "Software Engineering Intern",
 		},
 		{
