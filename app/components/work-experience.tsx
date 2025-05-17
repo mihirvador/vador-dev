@@ -1,8 +1,14 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { AppleIcon, AVAVIcon, ARCIcon, OrigamiRiskIcon } from "./icons";
+import { AppleIcon, AVAVIcon, ARCIcon, OrigamiRiskIcon, PalantirIcon } from "./icons";
 
 export function WorkExperience() {
 	const experiences = [
+		{
+			logo: <PalantirIcon url="https://www.palantir.com" className="h-12 w-12" />,
+			company: "Palantir",
+			team: "Gotham - Infrastructure Team",
+			title: "Software Engineering Intern",
+		},
 		{
 			logo: <AppleIcon url="https://www.apple.com" className="h-12 w-12" />,
 			company: "Apple",

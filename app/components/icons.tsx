@@ -21,6 +21,25 @@ export function SpotifyIcon(props: SVGProps<SVGSVGElement> & { url: string }) {
 	);
 }
 
+export function PalantirIcon(props: SVGProps<SVGSVGElement> & { url: string }) {
+	return (
+		<a href={props.url} target="_blank" rel="noopener noreferrer">
+			<svg
+				{...props}
+				xmlns="http://www.w3.org/2000/svg"
+				x="0px"
+				y="0px"
+				width="100"
+				height="100"
+				viewBox="0 0 1000 1000"
+				fill="currentColor"
+			>
+				<path d="M500,256c-102.09,0-185.8,83.71-185.8,185.8s83.71,185.8,185.8,185.8,185.8-83.71,185.8-185.8S602.09,256,500,256Zm0,314.43A128.63,128.63,0,1,1,628.63,441.81C626.59,513.27,569.42,570.44,500,570.44Zm165.38,40.84L500,682.74,334.62,611.28l-28.59,51L500,744l194-81.67Z"></path>
+			</svg>
+		</a>
+	);
+}
+
 export function AppleIcon(props: SVGProps<SVGSVGElement> & { url: string }) {
 	return (
 		<a href={props.url} target="_blank" rel="noopener noreferrer">
