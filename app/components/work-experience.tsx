@@ -6,13 +6,13 @@ export function WorkExperience() {
 		{
 			logo: <PalantirIcon url="https://www.palantir.com" className="h-12 w-12" />,
 			company: "Palantir",
-			team: "Gotham - Infrastructure Team",
+			team: "Production Infrastructure",
 			title: "Software Engineering Intern",
 		},
 		{
 			logo: <AppleIcon url="https://www.apple.com" className="h-12 w-12" />,
 			company: "Apple",
-			team: "Omega (Distrubuted Infrastructure) Team",
+			team: "ML & Build Infrastructure",
 			title: "Software Engineering Intern",
 		},
 		{
