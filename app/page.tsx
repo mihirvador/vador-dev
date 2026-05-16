@@ -10,7 +10,7 @@ export default function Page() {
   ]
 
   return (
-    <main className="mx-auto min-h-screen max-w-xl bg-white px-6 py-12 font-serif text-[17px] leading-7 text-black sm:px-8">
+    <main className="professor-page mx-auto min-h-screen max-w-xl bg-white px-6 py-12 text-[17px] font-normal leading-7 text-black sm:px-8">
       <h1 className="mb-6 text-3xl font-normal leading-tight">mihir vador</h1>
 
       <p className="mb-4 max-w-xl">i love building cool things.</p>

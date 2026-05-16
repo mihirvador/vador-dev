@@ -8,6 +8,13 @@
     background: #ffffff;
     color: #000000;
     color-scheme: light;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  .professor-page {
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 400;
   }
 
   :root {
