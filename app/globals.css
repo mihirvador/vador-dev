@@ -3,6 +3,13 @@
 @tailwind utilities;
 
 @layer base {
+  html,
+  body {
+    background: #ffffff;
+    color: #000000;
+    color-scheme: light;
+  }
+
   :root {
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
@@ -71,4 +78,3 @@
 .animate-float {
   animation: float 6s ease-in-out infinite;
 }
-
