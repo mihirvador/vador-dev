@@ -19,38 +19,24 @@ export function Header() {
   }
 
   return (
-    <header className="fixed top-0 z-50 backdrop-blur-sm justify-between items-center w-full">
-      <div className="flex items-center justify-between px-6 mt-4">
-        <nav className="flex items-center space-x-6 sm:space-x-4">
-          <ul className="flex space-x-6">
-            <li>
-              <Link href="/" className="text-lg font-medium hover:text-primary">
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link href="/projects" className="text-lg font-medium hover:text-primary">
-                Projects
-              </Link>
-            </li>
-          </ul>
-        </nav>
-        <div>
-        <Button 
-          variant="ghost" 
-          className="h-12 w-12 relative"
+    <header className="mx-auto w-full max-w-xl px-5 py-5">
+      <div className="flex items-center justify-between text-[#172015] dark:text-[#b9ef9a]">
+        <Link
+          href="/"
+          className="font-mono text-xs lowercase hover:bg-[#b7ef73] dark:hover:bg-[#8fdc7a] dark:hover:text-[#050805]"
+        >
+          mihir@home
+        </Link>
+        <Button
+          variant="ghost"
+          size="icon"
+          className="h-6 w-6 rounded-none text-[#172015] hover:bg-[#b7ef73] hover:text-[#172015] dark:text-[#b9ef9a] dark:hover:bg-[#8fdc7a] dark:hover:text-[#050805]"
           onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
         >
-          {theme === "dark" ? (
-            <Sun className="!h-6 !w-6" />
-          ) : (
-            <Moon className="!h-6 !w-6" />
-          )}
+          {theme === "dark" ? <Sun className="!h-3 !w-3" /> : <Moon className="!h-3 !w-3" />}
           <span className="sr-only">Toggle theme</span>
         </Button>
-        </div>
       </div>
     </header>
   )
 }
-

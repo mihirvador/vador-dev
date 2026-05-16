@@ -2,11 +2,13 @@ import { SVGProps, CSSProperties } from "react";
 import Image from "next/image";
 
 export function SpotifyIcon(props: SVGProps<SVGSVGElement> & { url: string }) {
+	const { url, className = "icon h-12 w-12", ...svgProps } = props;
+
 	return (
-		<a href={props.url} target="_blank" rel="noopener noreferrer">
+		<a href={url} target="_blank" rel="noopener noreferrer">
 			<svg
-				{...props}
-				className="icon h-12 w-12"
+				{...svgProps}
+				className={className}
 				fill="currentColor"
 				viewBox="0 0 24 24"
 				width="24"

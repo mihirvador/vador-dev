@@ -7,7 +7,12 @@ const nextConfig = {
 		SPOTIFY_REFRESH_TOKEN: process.env.SPOTIFY_REFRESH_TOKEN,
 	},
 	images: {
-		domains: ["i.scdn.co"],
+		remotePatterns: [
+			{
+				protocol: "https",
+				hostname: "i.scdn.co",
+			},
+		],
 	},
 };
 
